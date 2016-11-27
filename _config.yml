@@ -1,5 +1,6 @@
 name: How to Python
 description: Learning how to Python!
+baseurl: /howtopython
 defaults: 
  - scope:
      path: ""
