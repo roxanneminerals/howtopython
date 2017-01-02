@@ -3,6 +3,8 @@ title: Resources
 ---
 There are many resources available to help you learn Python. You may want to explore or build skills in Python without a specific project in mind. 
 
+<ul id="libinfo"></ul>
+
 **Google/ Web Search**
 
 Google can be really useful if you're just perusing something really broad or finding something really specific. 
@@ -56,4 +58,22 @@ Tips: Look for reviews to find well-executed classes, there are some bad ones ou
 Live classes and workshops can be a great way to learn with access to an instructor who is familiar with teaching learners and can answer questions.
 
 Tips: Try to find a class that is the right skill level for you. Look at the class materials or read the syllabus if possible. You want something that is challenging but also manageable. You may want to try and build some basic skills before the workshop to prepare.
+
+<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+<script src="https://raw.githubusercontent.com/fcheslack/libZoteroJS/master/build/libzotero.js" type="text/javascript"></script>
+<script type="text/javascript">
+var library;
+var $libinfo=$("#libinfo");
+$(function() {
+  library = new Zotero.Library("group", 910878, "how_to_python");
+  library.loadItems().then((response)=>{
+    response.loadedItems.forEach((it)=>{
+      $libinfo.append("<li>" + it.get("title") + "</li>");
+    }); 
+  });
+});
+</script>
 
